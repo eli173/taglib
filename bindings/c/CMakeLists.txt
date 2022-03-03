@@ -6,7 +6,16 @@ include_directories(
   ${CMAKE_CURRENT_SOURCE_DIR}/../../taglib/ogg
   ${CMAKE_CURRENT_SOURCE_DIR}/../../taglib/ogg/vorbis
   ${CMAKE_CURRENT_SOURCE_DIR}/../../taglib/ogg/flac
+  ${CMAKE_CURRENT_SOURCE_DIR}/../../taglib/ogg/opus
+	${CMAKE_CURRENT_SOURCE_DIR}/../../taglib/riff
+	${CMAKE_CURRENT_SOURCE_DIR}/../../taglib/riff/aiff
+	${CMAKE_CURRENT_SOURCE_DIR}/../../taglib/riff/wav
+	${CMAKE_CURRENT_SOURCE_DIR}/../../taglib/ape
+	${CMAKE_CURRENT_SOURCE_DIR}/../../taglib/mod
   ${CMAKE_CURRENT_SOURCE_DIR}/../../taglib/flac
+  ${CMAKE_CURRENT_SOURCE_DIR}/../../taglib/s3m
+  ${CMAKE_CURRENT_SOURCE_DIR}/../../taglib/it
+  ${CMAKE_CURRENT_SOURCE_DIR}/../../taglib/xm
   ${CMAKE_CURRENT_SOURCE_DIR}/../../taglib/mpc
   ${CMAKE_CURRENT_SOURCE_DIR}/../../taglib/mp4
   ${CMAKE_CURRENT_SOURCE_DIR}/../../taglib/mpeg/id3v2

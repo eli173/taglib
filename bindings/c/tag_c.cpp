@@ -36,6 +36,14 @@
 #include <speexfile.h>
 #include <trueaudiofile.h>
 #include <mp4file.h>
+#include <opusfile.h>
+#include <aifffile.h>
+#include <wavfile.h>
+#include <apefile.h>
+#include <modfile.h>
+#include <s3mfile.h>
+#include <itfile.h>
+#include <xmfile.h>
 #include <tag.h>
 #include <string.h>
 #include <id3v2framefactory.h>
@@ -118,6 +126,22 @@ TagLib_File *taglib_file_new_type(const char *filename, TagLib_File_Type type)
     return reinterpret_cast<TagLib_File *>(new MP4::File(filename));
   case TagLib_File_ASF:
     return reinterpret_cast<TagLib_File *>(new ASF::File(filename));
+	case TagLib_File_Opus:
+		return reinterpret_cast<TagLib_File *>(new Ogg::Opus::File(filename));
+	case TagLib_File_AIFF:
+		return reinterpret_cast<TagLib_File *>(new RIFF::AIFF::File(filename));
+	case TagLib_File_WAV:
+		return reinterpret_cast<TagLib_File *>(new RIFF::WAV::File(filename));
+	case TagLib_File_APE:
+		return reinterpret_cast<TagLib_File *>(new APE::File(filename));
+	case TagLib_File_Mod:
+		return reinterpret_cast<TagLib_File *>(new Mod::File(filename));
+	case TagLib_File_S3M:
+		return reinterpret_cast<TagLib_File *>(new S3M::File(filename));
+	case TagLib_File_IT:
+		return reinterpret_cast<TagLib_File *>(new IT::File(filename));
+	case TagLib_File_XM:
+		return reinterpret_cast<TagLib_File *>(new XM::File(filename));
   default:
     return 0;
   }
